@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function toPersianNumeral(en: string) {
   return ('' + en).replace(/[0-9]/g, function (t) {
-    return '٠۱٢٣۴۵٦٧٨٩'.slice(+t, +t + 1);
+    return '٠۱٢٣۴۵۶٧٨٩'.slice(+t, +t + 1);
   });
 }
 
@@ -14,7 +14,7 @@ const theme = createTheme({
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: 'IranSans',
+          fontFamily: 'IRANYekanX',
           color: '#fff',
         },
       },
@@ -47,61 +47,32 @@ export default function TopArticle() {
       <Container
         maxWidth="xl"
         sx={{
-          minHeight: 'calc(100vh - 100px)',
+          color: '#fff',
+          width: '90%',
+          minHeight: 'calc(100vh - 120px)',
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           alignItems: 'center',
-          gap: '30px',
-          justifyContent: 'center',
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/child-making-robot.png');`,
+          borderRadius: '41px',
+          justifyContent: 'flex-end',
+          background: `url('/wall-e.jpg');`,
           backgroundRepeat: 'no-repeat',
+          textAlign: 'right',
           backgroundSize: {
-            xs: '100% calc(100vh - 100px)',
-            md: '100% calc(100vh - 100px)',
+            xs: '100% calc(100vh - 120px)',
+            md: 'cover',
           },
         }}
       >
-        <Box>
-          <ThemeProvider theme={theme}>
-            <Typography
-              textAlign="center"
-              sx={{ fontSize: { xs: '20px', md: '30px' }, fontWeight: 700 }}
-            >
-              چهاردهمین دوره مسابقات رباتیک دانشگاه صنعتی نوشیروانی بابل
-              <br />
-              (روبونیت)
-            </Typography>
-          </ThemeProvider>
-          <StyledLine />
-        </Box>
-        <Box>
-          <ThemeProvider theme={theme}>
-            <Typography
-              textAlign="center"
-              sx={{ fontSize: { xs: '20px', md: '30px' }, fontWeight: 700 }}
-            >
-              {`از ${toPersianNumeral('15')} تا ${toPersianNumeral(
-                '18'
-              )} بهمن ${toPersianNumeral('1401')}`}
-            </Typography>
-          </ThemeProvider>
-          <StyledLine />
-        </Box>
-        <Box>
-          <ThemeProvider theme={theme}>
-            <Typography
-              textAlign="center"
-              sx={{ fontSize: { xs: '20px', md: '30px' }, fontWeight: 700 }}
-            >
-              بابل، مازندران، ایران
-            </Typography>
-          </ThemeProvider>
-          <StyledLine />
-        </Box>
-        <Box>
-          <Link href="/signup">
-            <StyledButton>همین حالا ثبت نام کنید</StyledButton>
-          </Link>
+        <Box sx={{ marginRight: 5 }}>
+          <Typography sx={{ fontSize: 96, fontWeight: 700 }}>
+            روبونیت ۲۰۲۳
+          </Typography>
+          <Typography sx={{ fontSize: 37 }}>
+            چهاردهمین دوره مسابقات رباتیک
+            <br />
+            دانشگاه صنعتی نوشیروانی بابل
+          </Typography>
         </Box>
       </Container>
     </>
