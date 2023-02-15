@@ -19,6 +19,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/contexts/**/*.dd.ts",
+    "src/pages/contexts/iranYekanX.font.js"
+  ],
   "exclude": ["node_modules"]
 }

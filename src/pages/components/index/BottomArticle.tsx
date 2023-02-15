@@ -22,82 +22,55 @@ export default function BottomArticle() {
       <Container
         maxWidth="xl"
         sx={{
-          minHeight: '70vh',
-          backgroundColor: '#E5E5E5',
+          width: '90%',
+          minHeight: '50vh',
+          gap: 3,
           display: { xs: 'none', md: 'flex' },
-          gap: 5,
           alignItems: 'center',
         }}
+        disableGutters
       >
         <Box
           sx={{
-            height: '50vh',
+            flex: 5,
+            height: '35vh',
             display: 'flex',
-            flex: 3,
             flexDirection: 'column',
             alignItems: 'flex-end',
+            background: '#FFDD59',
             justifyContent: 'space-evenly',
+            borderRadius: '40px',
           }}
         >
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography
-              sx={{ fontFamily: 'IranSans', fontSize: 32, fontWeight: 700 }}
-              textAlign="center"
-            >{`روبونیت ${toPersianNumeral('1401')}`}</Typography>
-            <StyledLine />
-          </Box>
-          <Box sx={{ flexGrow: 3 }}>
-            <Typography
-              textAlign="right"
-              sx={{
-                fontFamily: 'IranSans',
-                fontSize: 20,
-                fontWeight: 700,
-              }}
-            >
-              مسابقات رباتیک دانشگاه صنعتی نوشیروانی بابل (روبونیت) پرسابقه‌ترین
-              مسابقهٔ رباتیک در سطح کشور است که پس از بنیانگذاری درمهر ماه سال
-              ۱۳۸۱ و برگزاری اولین دوره کشوری آن در اردیبهشت سال ۱۳۸۲ به همت
-              انجمن علمی دانشجویان مهندسی برق و کامپیوتر ابتدا در دانشکدهٔ فنی
-              دانشگاه مازندران و امروزه با عنوان دانشگاه صنعتی نوشیروانی بابل با
-              شور و اشتیاق و حساسیت بالایی برگزار می‌گردد و هرساله توجه
-              علاقه‌مندان عرصه رباتیک و تیم‌های رباتیک زیادی را در سطح کشور به
-              خود معطوف کرده‌است.
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              width: '100%',
-              flexGrow: 1,
-              display: 'flex',
-              justifyContent: 'space-evenly',
-            }}
-          >
-            <Typography
-              sx={{ fontFamily: 'IranSans', fontSize: 24, fontWeight: 700 }}
-            >{`تیم ${toPersianNumeral('150')}`}</Typography>
-            <Typography
-              sx={{ fontFamily: 'IranSans', fontSize: 24, fontWeight: 700 }}
-            >{`استان ${toPersianNumeral('6')}`}</Typography>
-            <Typography
-              sx={{ fontFamily: 'IranSans', fontSize: 24, fontWeight: 700 }}
-            >{`شرکت کننده ${toPersianNumeral('2500')}`}</Typography>
-          </Box>
+          <Box></Box>
+          <Box></Box>
+          <Box></Box>
         </Box>
         <Box
           sx={{
-            height: '50vh',
-            flex: 2,
+            flex: 1,
+            height: '35vh',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            background: '#323232',
+            justifyContent: 'space-evenly',
+            borderRadius: '40px',
           }}
         >
-          <div className={styles.imageContainer}>
+          <Box>
             <Image
-              src="/prev.png"
-              alt="Preview of event"
-              layout="fill"
-              className={styles.image}
+              src="/rocket.png"
+              alt="Image of a rocket"
+              width={120}
+              height={120}
             />
-          </div>
+          </Box>
+          <Box>
+            <Typography sx={{ fontSize: 30, fontWeight: 400, color: '#fff' }}>
+              ثــــبت‌نـام
+            </Typography>
+          </Box>
         </Box>
       </Container>
     </>

@@ -1,9 +1,15 @@
-:root {
-  font-family: 'IranSans', 'Roboto';
+@font-face {
+  font-family: 'IRANYekanX';
+  font-style: normal;
+  font-weight: normal;
+  src: local('IRANYekanX'),
+    url('/fonts/IRANYekanX/woff2/IRANYekanXNoEn-Regular.woff2') format('woff2');
 }
 
 body {
   margin: 0;
+  font-family: 'IRANYekanX', 'Roboto', 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a {

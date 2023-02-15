@@ -1,14 +1,23 @@
+import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import Navbar from './components/index/Navbar';
 import TopPaper from './components/index/TopArticle';
 import BottomArticle from './components/index/BottomArticle';
 import Sights from './components/index/Sights';
 import Footer from './components/index/Footer';
+import { ThemeProvider, createTheme } from '@mui/material';
+import { LangContext } from './contexts';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'IRANYekanX',
+  },
+});
 
 export default function Home() {
+  const [lang, setLang] = useState('fa');
+
   return (
     <>
       <Head>
@@ -19,13 +28,17 @@ export default function Home() {
         <meta http-equiv="Content-Language" content="fa" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <main className={styles.main}>
-        <TopPaper />
-        <BottomArticle />
-        <Sights />
-        <Footer />
-      </main>
+      <LangContext.Provider value={lang}>
+        <ThemeProvider theme={theme}>
+          <Navbar setLang={setLang} />
+          <main className={styles.main}>
+            <TopPaper />
+            <BottomArticle />
+            <Sights />
+            <Footer />
+          </main>
+        </ThemeProvider>
+      </LangContext.Provider>
     </>
   );
 }

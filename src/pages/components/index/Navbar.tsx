@@ -57,7 +57,10 @@ export default function Navbar({ setLang }: IndexProps) {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
+      <AppBar
+        position="static"
+        sx={{ backgroundColor: '#fff', boxShadow: 'none' }}
+      >
         <Container maxWidth="xl" sx={{ color: '#000' }}>
           <Toolbar sx={{ height: 100, width: '90%', margin: 'auto' }}>
             <LangButtons sx={{ display: { xs: 'none', md: 'flex' } }}>
