@@ -1,96 +1,52 @@
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import {
   AppBar,
   Box,
   Button,
-  InputBase,
   Menu,
   MenuItem,
-  ThemeProvider,
   Toolbar,
   Typography,
-  createTheme,
 } from '@mui/material';
 import { Container } from '@mui/system';
-import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
-
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: 28,
-  backgroundColor: '#E5E5E5',
-  '&:hover': {
-    backgroundColor: alpha('#E5E5E5', 0.8),
-  },
-  marginLeft: theme.spacing(1.5),
-  width: '100%',
-  height: 40,
-  marginRight: theme.spacing(1.5),
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  fontFamily: 'IranSans',
-  fontWeight: 700,
-  fontSize: '16px',
-  color: '#1F1F1F',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: '20ch',
-      '&:focus': {
-        width: '30ch',
-      },
-    },
-  },
-}));
+import { IndexProps } from '@/pages/types/IndexProps';
+import { LangContext } from '@/pages/contexts';
 
 const pages = [
-  { name: 'لیگ ها', href: '/leagues' },
-  { name: 'قوانین', href: '/rules' },
   { name: 'درباره ما', href: '/about' },
   { name: 'تماس با ما', href: '/contact' },
-  { name: 'ثبت نام', href: '/signup' },
-  { name: 'ورود', href: '/login' },
+  { name: 'لیگ ها', href: '/leagues' },
+  { name: 'اخبار', href: '/rules' },
+  { name: 'ثبت نام / ورود', href: '/auth' },
 ];
 
 const StyledButton = styled(Button)(() => ({
   borderRadius: '28px',
   padding: 10,
   '&:hover': {
-    backgroundColor: '#272727',
+    backgroundColor: '#d1d1d1',
   },
 }));
 
-const theme = createTheme({
-  typography: {
-    fontFamily: 'IranSans',
+const LangButtons = styled(Box)(() => ({
+  minWidth: 92,
+  maxHeight: 31,
+  borderRadius: '7px',
+  boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
+  fontWeight: 700,
+  '&:hover': {
+    cursor: 'pointer',
   },
-});
+}));
 
-export default function Navbar() {
+export default function Navbar({ setLang }: IndexProps) {
+  const lang = useContext(LangContext);
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -101,9 +57,35 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#1F1F1F' }}>
-        <Container maxWidth="xl">
+      <AppBar position="static" sx={{ backgroundColor: '#fff' }}>
+        <Container maxWidth="xl" sx={{ color: '#000' }}>
           <Toolbar sx={{ height: 100, width: '90%', margin: 'auto' }}>
+            <LangButtons sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  textAlign: 'center',
+                  padding: '4px 0',
+                  backgroundColor: lang === 'fa' ? '#fff' : '#D9D9D9',
+                  borderRadius: '7px 0 0 7px',
+                }}
+                onClick={() => setLang('en')}
+              >
+                EN
+              </Box>
+              <Box
+                sx={{
+                  flex: 1,
+                  textAlign: 'center',
+                  backgroundColor: lang === 'fa' ? '#D9D9D9' : '#fff',
+                  padding: '4px 0',
+                  borderRadius: '0 7px 7px 0',
+                }}
+                onClick={() => setLang('fa')}
+              >
+                فا
+              </Box>
+            </LangButtons>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
               <IconButton
                 size="large"
@@ -136,50 +118,27 @@ export default function Navbar() {
                     onClick={handleCloseNavMenu}
                     sx={{ justifyContent: 'center' }}
                   >
-                    <ThemeProvider theme={theme}>
-                      <Link href={page.href}>
-                        <Typography textAlign="center">{page.name}</Typography>
-                      </Link>
-                    </ThemeProvider>
+                    <Link href={page.href}>
+                      <Typography textAlign="center">{page.name}</Typography>
+                    </Link>
                   </MenuItem>
                 ))}
-                <MenuItem
-                  key={'lang'}
-                  onClick={handleCloseNavMenu}
-                  sx={{ justifyContent: 'center', gap: 2 }}
-                >
-                  <ThemeProvider theme={theme}>
-                    <Image src="/lang.png" alt="lang" width={24} height={14} />
-                    <Typography textAlign="center">فارسی</Typography>
-                  </ThemeProvider>
-                </MenuItem>
               </Menu>
             </Box>
             <Box
               sx={{
                 flexGrow: 1,
                 display: { xs: 'none', md: 'flex' },
-                justifyContent: 'space-evenly',
+                justifyContent: 'center',
+                gap: 2,
               }}
             >
-              <StyledButton
-                key={'lang'}
-                sx={{
-                  fontFamily: 'IranSans',
-                  color: '#E5E5E5',
-                  display: 'flex',
-                  gap: 2,
-                }}
-              >
-                <Image src="/lang.png" alt="lang" width={24} height={14} />
-                <span>فارسی</span>
-              </StyledButton>
               {pages.map((page) => (
                 <StyledButton
                   key={page.name}
                   sx={{
-                    fontFamily: 'IranSans',
-                    color: '#E5E5E5',
+                    color: 'inherit',
+                    fontWeight: 700,
                   }}
                 >
                   <Link href={page.href}>{page.name}</Link>
@@ -187,19 +146,13 @@ export default function Navbar() {
               ))}
             </Box>
 
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon sx={{ color: '#1F1F1F' }} />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder={`...جستجو`}
-                inputProps={{
-                  'aria-label': 'search',
-                  style: { textAlign: 'right' },
-                }}
-              />
-            </Search>
-            <Image src="/logo.png" alt="logo" width={55.84} height={52.96} />
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={63.82}
+              height={60.53}
+              unoptimized
+            />
           </Toolbar>
         </Container>
       </AppBar>
