@@ -4,7 +4,7 @@ import styles from '@/styles/Home.module.css';
 import Navbar from './components/index/Navbar';
 import TopPaper from './components/index/TopArticle';
 import BottomArticle from './components/index/BottomArticle';
-import Sights from './components/index/Sights';
+import RecentEvents from './components/index/RecentEvents';
 import Footer from './components/index/Footer';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { LangContext } from './contexts';
@@ -34,7 +34,7 @@ export default function Home() {
           <main className={styles.main}>
             <TopPaper />
             <BottomArticle />
-            <Sights />
+            <RecentEvents />
             <Footer />
           </main>
         </ThemeProvider>
