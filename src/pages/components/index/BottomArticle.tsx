@@ -9,7 +9,7 @@ function toPersianNumeral(en: string) {
   });
 }
 
-const Circle = styled(Box)(({ theme }) => ({
+const Circle = styled(Box)(({}) => ({
   width: 20,
   height: 20,
   borderRadius: '50%',

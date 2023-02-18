@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: 'IRANYekanX', 'Roboto', 'Lucida Sans', 'Lucida Sans Regular',
     'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
