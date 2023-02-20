@@ -8,6 +8,7 @@ import RecentEvents from './components/index/RecentEvents';
 import Footer from './components/index/Footer';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { LangContext } from './contexts';
+import Contact from './components/index/Contact';
 
 const theme = createTheme({
   typography: {
@@ -35,8 +36,9 @@ export default function Home() {
             <TopPaper />
             <BottomArticle />
             <RecentEvents />
-            <Footer />
+            <Contact />
           </main>
+          <Footer />
         </ThemeProvider>
       </LangContext.Provider>
     </>

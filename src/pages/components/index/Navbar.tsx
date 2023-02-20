@@ -61,8 +61,19 @@ export default function Navbar({ setLang }: IndexProps) {
         position="static"
         sx={{ backgroundColor: '#fff', boxShadow: 'none' }}
       >
-        <Container maxWidth="xl" sx={{ color: '#000' }}>
-          <Toolbar sx={{ height: 100, width: '90%', margin: 'auto' }}>
+        <Container
+          maxWidth="xl"
+          sx={{ color: '#000', marginTop: 5, marginBottom: 5 }}
+        >
+          <Toolbar
+            sx={{
+              height: 100,
+              width: '90%',
+              margin: 'auto',
+              boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.5)',
+              borderRadius: '17px',
+            }}
+          >
             <LangButtons sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Box
                 sx={{
