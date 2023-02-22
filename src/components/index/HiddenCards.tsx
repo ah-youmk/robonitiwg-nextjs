@@ -2,7 +2,7 @@ import { Typography, Card } from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 
-import { RecentEventsProps } from '@/pages/types/RecentEventsProps';
+import { RecentEventsProps } from '@/types/RecentEventsProps';
 
 export default function HiddenCards({
   firstText,

@@ -1,5 +1,4 @@
 import { Container, Box, Typography } from '@mui/material';
-import Image from 'next/image';
 
 export default function Colleagues() {
   return (
