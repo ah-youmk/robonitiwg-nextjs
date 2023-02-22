@@ -4,7 +4,7 @@ import {
   Typography,
   TextField,
   styled,
-  Paper,
+  Button,
 } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import stylisRTLPlugin from 'stylis-plugin-rtl';
@@ -30,9 +30,6 @@ const CustomTextField = styled(TextField)(() => ({
   },
   '& label.Mui-focused': {
     color: 'white',
-  },
-  '& .MuiInput-underline:after': {
-    borderBottomColor: 'green',
   },
   '& .MuiOutlinedInput-root': {
     '& fieldset': {
@@ -209,7 +206,18 @@ export default function Contact() {
                 </ThemeProvider>
               </CacheProvider>
             </Box>
-            <Box sx={{ width: '100%', flex: 1 }}></Box>
+            <Box sx={{ width: '100%', flex: 1 }}>
+              <Button
+                variant="contained"
+                sx={{
+                  width: '100%',
+                  backgroundColor: '#1452E3',
+                  '&:hover': { backgroundColor: '#205CE6' },
+                }}
+              >
+                ارسال
+              </Button>
+            </Box>
           </Container>
         </Box>
       </Container>

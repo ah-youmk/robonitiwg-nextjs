@@ -1,45 +1,5 @@
 import { Container } from '@mui/system';
-import { Box, Button, Typography, createTheme, styled } from '@mui/material';
-import { ThemeProvider } from '@emotion/react';
-import Link from 'next/link';
-
-function toPersianNumeral(en: string) {
-  return ('' + en).replace(/[0-9]/g, function (t) {
-    return '٠۱٢٣۴۵۶٧٨٩'.slice(+t, +t + 1);
-  });
-}
-
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          fontFamily: 'IRANYekanX',
-          color: '#fff',
-        },
-      },
-    },
-  },
-});
-
-const StyledLine = styled(Box)(({ theme }) => ({
-  width: 197,
-  margin: 'auto',
-  marginTop: 30,
-  border: '1px dashed #F7BF2C',
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#F7BF2C',
-  fontFamily: 'IranSans',
-  color: 'inherit',
-  paddingRight: 10,
-  paddingLeft: 10,
-  borderRadius: 8,
-  '&:hover': {
-    backgroundColor: '#f7be2cc7',
-  },
-}));
+import { Box, Typography } from '@mui/material';
 
 export default function TopArticle() {
   return (
@@ -52,6 +12,7 @@ export default function TopArticle() {
           minHeight: 'calc(100vh - 120px)',
           display: 'flex',
           flexDirection: 'row',
+          marginTop: 5,
           alignItems: 'center',
           borderRadius: '41px',
           justifyContent: 'flex-end',
