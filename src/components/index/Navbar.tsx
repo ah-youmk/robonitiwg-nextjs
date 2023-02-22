@@ -14,8 +14,8 @@ import { useState, useContext } from 'react';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
-import { IndexProps } from '@/pages/types/IndexProps';
-import { LangContext } from '@/pages/contexts';
+import { IndexProps } from '@/types/IndexProps';
+import { LangContext } from '@/contexts';
 
 const pages = [
   { name: 'درباره ما', href: '/about' },
