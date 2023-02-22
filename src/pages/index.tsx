@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
-import Navbar from '../components/index/Navbar';
-import TopPaper from '../components/index/TopArticle';
-import BottomArticle from '../components/index/BottomArticle';
-import RecentEvents from '../components/index/RecentEvents';
-import Footer from '../components/index/Footer';
+import Navbar from '@/components/index/Navbar';
+import TopPaper from '@/components/index/TopArticle';
+import BottomArticle from '@/components/index/BottomArticle';
+import RecentEvents from '@/components/index/RecentEvents';
+import Footer from '@/components/index/Footer';
 import { ThemeProvider, createTheme } from '@mui/material';
-import { LangContext } from '../contexts';
-import Contact from '../components/index/Contact';
-import Colleagues from '../components/index/Colleagues';
+import { LangContext } from '@/contexts';
+import Contact from '@/components/index/Contact';
+import Colleagues from '@/components/index/Colleagues';
 
 const theme = createTheme({
   typography: {
