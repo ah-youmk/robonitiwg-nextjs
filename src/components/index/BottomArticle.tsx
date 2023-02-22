@@ -1,7 +1,6 @@
 import { Box, Typography, styled } from '@mui/material';
 import { Container } from '@mui/system';
 import Image from 'next/image';
-import styles from './BottomArticle.module.css';
 
 function toPersianNumeral(en: string) {
   return ('' + en).replace(/[0-9]/g, function (t) {
@@ -67,10 +66,25 @@ export default function BottomArticle() {
                 flex: 3,
               }}
             >
-              <Box className={styles.blob}>
-                <Typography className={styles.blobText}>{`${toPersianNumeral(
-                  '+150'
-                )}`}</Typography>
+              <Box
+                sx={{
+                  position: 'absolute',
+                  width: '129.68526383324392428037629966197px',
+                  height: '130.31550000723984636101685916587px',
+                  backgroundImage: `url('/blob.svg')`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right',
+                }}
+              >
+                <Typography
+                  sx={{
+                    position: 'relative',
+                    fontSize: 100,
+                    fontWeight: 700,
+                    right: '35px',
+                  }}
+                >{`${toPersianNumeral('+150')}`}</Typography>
               </Box>
             </Box>
             <Box
@@ -112,10 +126,25 @@ export default function BottomArticle() {
                 flex: 3,
               }}
             >
-              <Box className={styles.blob}>
-                <Typography className={styles.blobText}>{`${toPersianNumeral(
-                  '+13'
-                )}`}</Typography>
+              <Box
+                sx={{
+                  position: 'absolute',
+                  width: '129.68526383324392428037629966197px',
+                  height: '130.31550000723984636101685916587px',
+                  backgroundImage: `url('/blob.svg')`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right',
+                }}
+              >
+                <Typography
+                  sx={{
+                    position: 'relative',
+                    fontSize: 100,
+                    fontWeight: 700,
+                    right: '35px',
+                  }}
+                >{`${toPersianNumeral('+13')}`}</Typography>
               </Box>
             </Box>
             <Box
