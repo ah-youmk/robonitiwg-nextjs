@@ -2,6 +2,7 @@
   font-family: 'IRANYekanX';
   font-style: normal;
   font-weight: normal;
+  font-size: 1rem;
   src: local('IRANYekanX'),
     url('/fonts/IRANYekanX/woff2/IRANYekanX-Regular.woff2') format('woff2');
 }

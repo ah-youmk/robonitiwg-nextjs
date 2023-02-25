@@ -108,7 +108,7 @@ export default function Contact() {
             <Box sx={{ width: '100%', flex: 1 }}>
               <Typography
                 textAlign="right"
-                sx={{ color: '#fff', fontSize: 30, fontWeight: 700 }}
+                sx={{ color: '#fff', fontSize: '1.875rem', fontWeight: 700 }}
               >
                 ارتباط با ما
               </Typography>

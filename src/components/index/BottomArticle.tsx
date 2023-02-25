@@ -80,7 +80,7 @@ export default function BottomArticle() {
                 <Typography
                   sx={{
                     position: 'relative',
-                    fontSize: 100,
+                    fontSize: '6.25rem',
                     fontWeight: 700,
                     right: '35px',
                   }}
@@ -97,7 +97,7 @@ export default function BottomArticle() {
               }}
             >
               <Typography
-                sx={{ fontSize: 20, fontWeight: 700 }}
+                sx={{ fontSize: '1.25rem', fontWeight: 700 }}
                 textAlign="right"
               >
                 تیم شرکت کننده در آخرین دوره
@@ -140,7 +140,7 @@ export default function BottomArticle() {
                 <Typography
                   sx={{
                     position: 'relative',
-                    fontSize: 100,
+                    fontSize: '6.25rem',
                     fontWeight: 700,
                     right: '35px',
                   }}
@@ -156,7 +156,7 @@ export default function BottomArticle() {
                 marginTop: 5,
               }}
             >
-              <Typography sx={{ fontSize: 20, fontWeight: 700 }}>
+              <Typography sx={{ fontSize: '1.25rem', fontWeight: 700 }}>
                 رشته متنوع در آخرین دوره
               </Typography>
             </Box>
@@ -182,7 +182,7 @@ export default function BottomArticle() {
               }}
             >
               <Box>
-                <Typography sx={{ fontSize: 30, fontWeight: 700 }}>
+                <Typography sx={{ fontSize: '1.875rem', fontWeight: 700 }}>
                   درباره روبونیت
                 </Typography>
               </Box>
@@ -199,7 +199,7 @@ export default function BottomArticle() {
               <Box sx={{ width: '98%' }}>
                 <Typography
                   sx={{
-                    fontSize: 16,
+                    fontSize: '1rem',
                     direction: 'rtl',
                   }}
                   align="justify"
@@ -238,7 +238,9 @@ export default function BottomArticle() {
             />
           </Box>
           <Box>
-            <Typography sx={{ fontSize: 30, fontWeight: 400, color: '#fff' }}>
+            <Typography
+              sx={{ fontSize: '1.875rem', fontWeight: 400, color: '#fff' }}
+            >
               ثــــبت‌نـام
             </Typography>
           </Box>

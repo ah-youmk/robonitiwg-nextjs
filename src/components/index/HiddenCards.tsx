@@ -34,11 +34,14 @@ export default function HiddenCards({
             gutterBottom
             component="div"
             align="justify"
-            sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+            sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
           >
             روبونیت ۲۰۱۹ - گزارش کلی پنهان اول
           </Typography>
-          <Typography sx={{ fontSize: 16, direction: 'rtl' }} align="justify">
+          <Typography
+            sx={{ fontSize: '1rem', direction: 'rtl' }}
+            align="justify"
+          >
             {firstText}
           </Typography>
         </CardContent>
@@ -66,11 +69,14 @@ export default function HiddenCards({
             gutterBottom
             component="div"
             align="justify"
-            sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+            sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
           >
             روبونیت ۲۰۱۹ - گزارش کلی پنهان دوم
           </Typography>
-          <Typography sx={{ fontSize: 16, direction: 'rtl' }} align="justify">
+          <Typography
+            sx={{ fontSize: '1rem', direction: 'rtl' }}
+            align="justify"
+          >
             {secondText}
           </Typography>
         </CardContent>
@@ -99,11 +105,14 @@ export default function HiddenCards({
             gutterBottom
             component="div"
             align="justify"
-            sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+            sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
           >
             روبونیت ۲۰۱۹ - گزارش کلی پنهان سوم
           </Typography>
-          <Typography sx={{ fontSize: 16, direction: 'rtl' }} align="justify">
+          <Typography
+            sx={{ fontSize: '1rem', direction: 'rtl' }}
+            align="justify"
+          >
             {thirdText}
           </Typography>
         </CardContent>

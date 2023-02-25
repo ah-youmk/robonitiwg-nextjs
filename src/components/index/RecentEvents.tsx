@@ -93,10 +93,10 @@ export default function RecentEvents() {
             gap: 1,
           }}
         >
-          <Typography sx={{ fontSize: 30, fontWeight: 700 }}>
+          <Typography sx={{ fontSize: '1.875rem', fontWeight: 700 }}>
             رویداد های اخیر
           </Typography>
-          <Typography sx={{ fontSize: 20 }}>
+          <Typography sx={{ fontSize: '1.25rem' }}>
             آخرین رویداد های برگزار شده توسط دبیرخانه
           </Typography>
         </Box>
@@ -135,7 +135,7 @@ export default function RecentEvents() {
                 gutterBottom
                 component="div"
                 align="justify"
-                sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+                sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
               >
                 روبونیت ۲۰۱۹ - گزارش کلی اول
               </Typography>
@@ -171,12 +171,12 @@ export default function RecentEvents() {
                 gutterBottom
                 component="div"
                 align="justify"
-                sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+                sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
               >
                 نمایشگاه ایده اختراع ۲۰۱۹ - گزارش کلی
               </Typography>
               <Typography
-                sx={{ fontSize: 16, direction: 'rtl' }}
+                sx={{ fontSize: '1rem', direction: 'rtl' }}
                 align="justify"
               >
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
@@ -207,12 +207,12 @@ export default function RecentEvents() {
                 gutterBottom
                 component="div"
                 align="justify"
-                sx={{ direction: 'rtl', fontSize: 18, fontWeight: 700 }}
+                sx={{ direction: 'rtl', fontSize: '1.125rem', fontWeight: 700 }}
               >
                 شروع فعالیت مجدد دبیرخانه پس از کرونا
               </Typography>
               <Typography
-                sx={{ fontSize: 16, direction: 'rtl' }}
+                sx={{ fontSize: '1rem', direction: 'rtl' }}
                 align="justify"
               >
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با

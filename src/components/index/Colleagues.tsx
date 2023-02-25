@@ -1,4 +1,5 @@
-import { Container, Box, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import Container from '@mui/material/Container';
 
 export default function Colleagues() {
   return (
@@ -25,11 +26,11 @@ export default function Colleagues() {
           <Box>
             <Typography
               textAlign="center"
-              sx={{ fontSize: '30px', fontWeight: 700 }}
+              sx={{ fontSize: '1.875rem', fontWeight: 700 }}
             >
               همکاران ما
             </Typography>
-            <Typography textAlign="center" sx={{ fontSize: '20px' }}>
+            <Typography textAlign="center" sx={{ fontSize: '1.25rem' }}>
               حامیان برگزاری مسابقات و پروژه های دبیرخانه
             </Typography>
           </Box>
@@ -47,6 +48,20 @@ export default function Colleagues() {
               height: 143,
               width: 127,
               backgroundImage: `url('/colleague1.png')`,
+              backgroundSize: '127px 143px',
+              opacity: 0.6,
+              backgroundRepeat: 'no-repeat',
+              transition: '.3s all',
+              '&:hover': {
+                opacity: 1,
+              },
+            }}
+          ></Box>
+          <Box
+            sx={{
+              height: 143,
+              width: 127,
+              backgroundImage: `url('/colleague5.png')`,
               backgroundSize: '127px 143px',
               opacity: 0.6,
               backgroundRepeat: 'no-repeat',

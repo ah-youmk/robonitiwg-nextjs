@@ -26,10 +26,10 @@ export default function TopArticle() {
         }}
       >
         <Box sx={{ marginRight: 5 }}>
-          <Typography sx={{ fontSize: 96, fontWeight: 700 }}>
+          <Typography sx={{ fontSize: '6rem', fontWeight: 700 }}>
             روبونیت ۲۰۲۳
           </Typography>
-          <Typography sx={{ fontSize: 37 }}>
+          <Typography sx={{ fontSize: '2.313rem' }}>
             چهاردهمین دوره مسابقات رباتیک
             <br />
             دانشگاه صنعتی نوشیروانی بابل

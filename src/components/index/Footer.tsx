@@ -136,7 +136,7 @@ export default function Footer() {
             <Box sx={{ width: '100%' }}>
               <Typography
                 textAlign="right"
-                sx={{ fontSize: 18, fontWeight: 700 }}
+                sx={{ fontSize: '1.125rem', fontWeight: 700 }}
               >
                 ارتباط با ما
               </Typography>
@@ -153,7 +153,7 @@ export default function Footer() {
                 <MailIcon fontSize="small" />
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                     fontWeight: 700,
                   }}
                 >
@@ -164,7 +164,7 @@ export default function Footer() {
                 <PhoneIcon fontSize="small" />
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                     fontWeight: 700,
                   }}
                 >
@@ -189,7 +189,7 @@ export default function Footer() {
             >
               <Typography
                 textAlign="right"
-                sx={{ fontSize: 18, fontWeight: 700 }}
+                sx={{ fontSize: '1.125rem', fontWeight: 700 }}
               >
                 دسترسی سریع
               </Typography>
@@ -206,7 +206,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   اخبار
@@ -216,7 +216,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   پنل کاربری
@@ -225,7 +225,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   قوانین لیگ ها
@@ -234,7 +234,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   درباره ما
@@ -243,7 +243,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   تماس با ما
@@ -267,7 +267,7 @@ export default function Footer() {
             >
               <Typography
                 textAlign="right"
-                sx={{ fontSize: 18, fontWeight: 700 }}
+                sx={{ fontSize: '1.125rem', fontWeight: 700 }}
               >
                 لینک های مرتبط
               </Typography>
@@ -284,7 +284,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   دانشگاه صنعتی بابل
@@ -294,7 +294,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   بنیاد ملی نخبگان
@@ -303,7 +303,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   وبگاه وزارت علوم
@@ -312,7 +312,7 @@ export default function Footer() {
               <Link href="#">
                 <Typography
                   sx={{
-                    fontSize: 14,
+                    fontSize: '0.875rem',
                   }}
                 >
                   وبگاه سازمان علمی برق
@@ -332,7 +332,7 @@ export default function Footer() {
             <Box sx={{ width: '100%' }}>
               <Typography
                 textAlign="right"
-                sx={{ fontSize: 18, direction: 'rtl' }}
+                sx={{ fontSize: '1.125rem', direction: 'rtl' }}
               >
                 با عضویت در خبرنامه از اخبار روبونیت آگاه شوید:
               </Typography>
