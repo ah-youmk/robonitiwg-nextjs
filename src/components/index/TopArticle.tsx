@@ -16,7 +16,7 @@ export default function TopArticle() {
           alignItems: 'center',
           borderRadius: '41px',
           justifyContent: 'flex-end',
-          background: `url('/wall-e.jpg');`,
+          background: `url('/wall-e.webp');`,
           backgroundRepeat: 'no-repeat',
           textAlign: 'right',
           backgroundSize: {

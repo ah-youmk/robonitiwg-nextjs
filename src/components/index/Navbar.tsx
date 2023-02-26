@@ -158,7 +158,7 @@ export default function Navbar({ setLang }: IndexProps) {
             </Box>
 
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="logo"
               width={63.82}
               height={60.53}

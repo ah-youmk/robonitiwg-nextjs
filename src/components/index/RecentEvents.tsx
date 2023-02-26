@@ -128,7 +128,7 @@ export default function RecentEvents() {
           >
             <CardMedia
               sx={{ height: 280, aspectRatio: '3/2' }}
-              image="/event1.png"
+              image="/event1.webp"
             />
             <CardContent>
               <Typography
@@ -164,7 +164,7 @@ export default function RecentEvents() {
           >
             <CardMedia
               sx={{ height: 280, aspectRatio: '3/2' }}
-              image="/event2.png"
+              image="/event2.webp"
             />
             <CardContent>
               <Typography
@@ -200,7 +200,7 @@ export default function RecentEvents() {
           >
             <CardMedia
               sx={{ height: 280, aspectRatio: '3/2' }}
-              image="/event3.png"
+              image="/event3.webp"
             />
             <CardContent>
               <Typography
