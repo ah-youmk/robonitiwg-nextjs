@@ -9,7 +9,6 @@ import InsertChartOutlinedTwoToneIcon from '@mui/icons-material/InsertChartOutli
 import BadgeOutlinedIcon from '@mui/icons-material/BadgeOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -23,14 +22,12 @@ const theme = createTheme();
 theme.typography.caption = {
   fontSize: '0.75rem',
   '@media (min-width:600px)': {
-    fontSize: '0.5rem',
+    fontSize: '0.75rem',
   },
   [theme.breakpoints.up('sm')]: {
     fontSize: '1rem',
   },
 };
-
-const RightMenuFooter = () => <Box>footer</Box>;
 
 interface ItemMenuProps {
   onClick: React.MouseEventHandler<HTMLDivElement> | undefined;
@@ -71,8 +68,6 @@ const ItemMenuMobile = ({ children, onClick }: ItemMenuProps) => {
       sx={{
         width: '100%',
         height: { xs: '4vh', md: 49 },
-        borderRadius: '17px',
-        backgroundColor: '#D9D9D9',
         display: { xs: 'flex', md: 'none' },
         justifyContent: 'center',
         alignItems: 'center',
@@ -179,6 +174,8 @@ export default function RightMenu() {
             display: 'flex',
             flexDirection: 'column',
             flex: { xs: 2, md: 4 },
+            justifyContent: 'space-between',
+            paddingBottom: 5,
           }}
         >
           <Stack sx={{ width: '80%', gap: 2 }}>
@@ -198,7 +195,12 @@ export default function RightMenu() {
                 <List sx={{ direction: 'rtl' }}>
                   {menuItemDetails.map((item: MenuItem, _index) => (
                     <ListItem key={item.text} disablePadding>
-                      <ListItemButton>
+                      <ListItemButton
+                        disabled={enable === _index}
+                        onClick={() => {
+                          setEnable(_index);
+                        }}
+                      >
                         <ListItemIcon>{item.icon}</ListItemIcon>
                         <ListItemText
                           primary={item.text}
@@ -230,7 +232,18 @@ export default function RightMenu() {
               </React.Fragment>
             ))}
           </Stack>
-          <RightMenuFooter />
+          <Box sx={{ width: '80%', display: 'flex', justifyContent: 'center' }}>
+            <Box
+              sx={{
+                width: { xs: 75, md: 185.25 },
+                height: { xs: 50, md: 115.5 },
+                backgroundImage: `url('/footer-logo-gray.png')`,
+                backgroundPosition: 'center',
+                backgroundSize: 'contain',
+                backgroundRepeat: 'no-repeat',
+              }}
+            ></Box>
+          </Box>
         </Box>
       </ThemeProvider>
     </>

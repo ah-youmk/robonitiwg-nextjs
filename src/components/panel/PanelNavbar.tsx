@@ -28,25 +28,25 @@ export default function PanelNavbar() {
             height: '10vh',
             paddingRight: 2.5,
             paddingLeft: 2.5,
-            gap: { xs: 2, md: 3 },
+            gap: { xs: 1, md: 3 },
           }}
         >
-          <Box flex={4} alignItems="center" display="flex">
-            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
-              <Image
-                src="/footer-logo.png"
-                width={102.65}
-                height={64}
-                alt="logo"
-              />
-            </Box>
-            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-              <Image
-                src="/footer-logo.png"
-                width={85}
-                height={52.99}
-                alt="logo"
-              />
+          <Box
+            sx={{
+              flex: { xs: 3, md: 4 },
+              justifyContent: { xs: 'center', md: 'flex-start' },
+            }}
+            alignItems="center"
+            display="flex"
+          >
+            <Box
+              sx={{
+                width: { xs: 41.06, md: 102.65 },
+                height: { xs: 25.6, md: 64 },
+                position: 'relative',
+              }}
+            >
+              <Image src="/footer-logo.png" fill alt="logo" />
             </Box>
           </Box>
           <Box flex={10} alignItems="center" display="flex">

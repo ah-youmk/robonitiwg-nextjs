@@ -4,7 +4,7 @@ import MainContent from '@/components/panel/MainContent';
 import PanelNavbar from '@/components/panel/PanelNavbar';
 import { ThemeProvider, createTheme } from '@mui/material';
 
-const theme = createTheme({
+let theme = createTheme({
   typography: {
     fontFamily: 'IRANYekanX',
   },
