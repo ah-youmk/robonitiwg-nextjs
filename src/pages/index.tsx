@@ -6,7 +6,7 @@ import TopPaper from '@/components/index/TopArticle';
 import BottomArticle from '@/components/index/BottomArticle';
 import RecentEvents from '@/components/index/RecentEvents';
 import Footer from '@/components/index/Footer';
-import { ThemeProvider, createTheme } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { LangContext } from '@/contexts';
 import Contact from '@/components/index/Contact';
 import Colleagues from '@/components/index/Colleagues';
