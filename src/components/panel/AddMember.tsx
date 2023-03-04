@@ -27,7 +27,7 @@ theme.typography.body1 = {
     fontSize: '0.68rem',
   },
   [theme.breakpoints.up('sm')]: {
-    fontSize: '1.25rem',
+    fontSize: '1rem',
   },
 };
 
@@ -136,7 +136,7 @@ export default function AddMember() {
                     variant="contained"
                     sx={{
                       borderRadius: '9px',
-                      width: '10%',
+                      width: { xs: '25%', md: '10%' },
                       minWidth: '0',
                       height: 30,
                       color: '#000',
